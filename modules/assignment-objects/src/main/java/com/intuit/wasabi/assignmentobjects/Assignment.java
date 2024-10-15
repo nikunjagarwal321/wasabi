@@ -242,7 +242,18 @@ public class Assignment {
 
     @Override
     public int hashCode() {
-        return HashCodeBuilder.reflectionHashCode(this);
+        return new HashCodeBuilder().append(this.getUserID())
+                .append(this.getBucketLabel())
+                .append(this.getStatus())
+                .append(this.getContext())
+                .append(this.isCacheable())
+                .append(this.getExperimentID())
+                .append(this.getContext())
+                .append(this.getApplicationName())
+                .append(this.isBucketEmpty())
+                .append(this.getExperimentLabel())
+                .append(this.getPayload())
+                .toHashCode();
     }
 
     @Override
