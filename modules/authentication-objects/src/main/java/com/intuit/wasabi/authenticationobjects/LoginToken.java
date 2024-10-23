@@ -85,7 +85,10 @@ public class LoginToken {
 
     @Override
     public int hashCode() {
-        return HashCodeBuilder.reflectionHashCode(this);
+        return new HashCodeBuilder()
+                .append(token_type)
+                .append(access_token)
+                .toHashCode();
     }
 
     @Override

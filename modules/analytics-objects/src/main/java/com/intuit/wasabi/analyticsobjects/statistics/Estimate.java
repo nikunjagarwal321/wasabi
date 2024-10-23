@@ -82,7 +82,10 @@ public class Estimate implements Cloneable {
 
     @Override
     public int hashCode() {
-        return HashCodeBuilder.reflectionHashCode(this);
+        return new HashCodeBuilder().append(estimate)
+                .append(upperBound)
+                .append(lowerBound)
+                .toHashCode();
     }
 
     @Override

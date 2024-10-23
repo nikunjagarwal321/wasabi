@@ -90,7 +90,7 @@ public class LoginCredentials {
 
     @Override
     public int hashCode() {
-        return HashCodeBuilder.reflectionHashCode(this);
+        return new HashCodeBuilder().append(username).append(namespaceId).toHashCode();
     }
 
     @Override

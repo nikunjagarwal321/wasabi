@@ -113,7 +113,13 @@ public class Event implements Cloneable {
 
     @Override
     public int hashCode() {
-        return HashCodeBuilder.reflectionHashCode(this);
+        return new HashCodeBuilder().append(timestamp)
+                .append(type)
+                .append(name)
+                .append(context)
+                .append(payload)
+                .append(value)
+                .toHashCode();
     }
 
     @Override

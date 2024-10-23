@@ -106,7 +106,7 @@ public class EventTest {
     @Test
     public void testHashCode() {
         Event event = new Event();
-        assertThat(event.hashCode(), is(-1985862199));
+        assertThat(event.hashCode(), is(-252394171));
         assertThat(event.toString(), containsString("Event"));
     }
 }
