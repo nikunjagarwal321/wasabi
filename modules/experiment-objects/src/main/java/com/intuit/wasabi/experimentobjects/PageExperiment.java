@@ -104,7 +104,7 @@ public class PageExperiment implements Cloneable, Serializable {
 
     @Override
     public int hashCode() {
-        return HashCodeBuilder.reflectionHashCode(this);
+        return new HashCodeBuilder().append(id).append(label).append(allowNewAssignment).toHashCode();
     }
 
     @Override
